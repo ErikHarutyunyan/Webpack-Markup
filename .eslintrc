@@ -1,0 +1,43 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb-base", "plugin:prettier/recommended"],
+  "ignorePatterns": [
+    "node_modules/**",
+    "webpack.config.js",
+    "postcss.config.js",
+    "prettierrc.js",
+    "dist/**",
+    "**/vendor/*.js"
+  ],
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true,
+    "jquery": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "rules": {
+    "semi": "error", // automatic semicolon insertion , off
+    "eol-last": "error", // there must be a new line at the end \n
+    "no-plusplus": "off", // x++ - that's right
+    "quotes": "off", // so that I can use such a " " ,quote, that's why I off
+    "max-len": ["error", 150, { "ignoreUrls": true }], // a string can be up to 150 characters long, except for url links.
+    "no-tabs": "off", // I do not use tabs
+    "no-alert": "off", // I wrote to use for alert
+    "no-param-reassign": "off", // so that I can change the value of the parameter passed to functions
+    "no-console": "off", // I wrote to use for console
+    "no-return-await": "off", // I can write return await Promise.resolve()
+    "import/prefer-default-export": "off", // for import, export
+    "func-names": "off", // so that I can give the variable an anonymous function
+    "import/no-unresolved": "off", // for import, so you can write '../css/style'
+    "import/extensions": "off", // for import, so you can write '../css/style'
+    "no-mixed-spaces-and-tabs": [2, false], // not to use in one place spaces and   tabs
+    "no-unused-vars": "warn", // unused vars warning
+    "class-methods-use-this": "off", // for class
+    "max-classes-per-file": "off" // so that you can add as many classes as you want
+  }
+
+}
